@@ -1,0 +1,388 @@
+********************************************************
+theme-provider
+
+"use client"
+//uso del hook  como client server
+import { createContext, useContext } from "react";
+///
+///Declarndo varisble Theme que contiene un objeto llamdo colors
+/// que tiene 4 vriables de typo string
+/// cada propiedad es de tipo stringn en este caso
+type Theme = {
+    colors: {
+        primary: string
+        secondary: string
+        terciary: string
+        lang:string
+    }
+}
+
+/// para inicializar la varible defaultTheme
+/// se especifica el tipo de variable Theme
+/// y entonces se inicializan las variables con los valores
+/// correspondientes
+const defaultTheme: Theme = {
+    colors: {
+        primary: "#007bff",
+        secondary: "#6c757d",
+        terciary: 'yellow',
+        lang: 'en'
+    }
+}
+
+/// crear contexto pasandole el tipo de vcariable
+const ThemeContext = createContext(defaultTheme);
+
+/// crear provider
+export const ThemeProvider =({ children } : { children: React.ReactNode}) => {
+    return (
+        // crear provider pasandole el estado qu s vs utilizar en todas las pahuinas
+        // que se representan por la variab le children
+        // las s cuales tendran acceso  alas propiedades dentro de defaulTheme
+        // que en este caso son:
+        // primary: "#007bff",
+        // secondary: "#6c757d",
+        // terciary: 'yellow',
+        // lang: 'en'
+        <ThemeContext.Provider value={defaultTheme}>
+            {children}
+        </ThemeContext.Provider>
+    )
+}
+
+
+
+
+export const useTheme = () => useContext(ThemeContext);
+*************************************************************
+
+//PRESENT
+
+client-route
+
+"use client"
+/// se especifica que el componente es tipo client
+import { useTheme } from "../components/theme-provider";
+/// se exporta hook useTheme
+export default function ClientRoutePage() {
+    /// se inicializa la vriable tipo theme
+    const theme = useTheme();
+    return (
+        
+      
+        <>
+        {/* 
+        se hace referencia al objeto color y se utiliza la variable terciary 
+        tenemos acceso a estos gracias al procider
+        */}
+          <h1
+         style={{ color: theme.colors.terciary }}
+         >
+            Client Route
+        </h1>
+        {/* se hace referencia al objeto color y se utiliza la variable lang */}
+        {/* 
+            cada pguina debe ser marcada como tipo client para indicar un componente 
+            server cient y poder accesar sus propiedades entre corchetes ya que tenemos acceso a ellos
+            gracias a que en el contexto pasamos defaultTheme que tiene la declarcion
+            de las varibles on sus valores inicales
+        */}
+        <h1
+         
+         >
+            {/* Variable--> objeto--> propiedad */}
+            Lang : {theme.colors.lang}
+        </h1>
+        </>
+    );
+}
+
+****************SAMPLES************************
+<h1>Present Tense Phrases with Audio</h1>
+
+<table>
+    <tr>
+        <th>English Phrase</th>
+        <th>Translation (Spanish)</th>
+        <th>Play</th>
+    </tr>
+    <tr>
+        <td>I read a book.</td>
+        <td>Yo leo un libro.</td>
+        <td><button onclick="speak('I read a book')">🔊</button></td>
+    </tr>
+    <tr>
+        <td>She eats breakfast.</td>
+        <td>Ella desayuna.</td>
+        <td><button onclick="speak('She eats breakfast')">🔊</button></td>
+    </tr>
+    <tr>
+        <td>We go to the park.</td>
+        <td>Vamos al parque.</td>
+        <td><button onclick="speak('We go to the park')">🔊</button></td>
+    </tr>
+    <tr>
+        <td>He plays soccer.</td>
+        <td>Él juega fútbol.</td>
+        <td><button onclick="speak('He plays soccer')">🔊</button></td>
+    </tr>
+    <tr>
+        <td>They work every day.</td>
+        <td>Ellos trabajan todos los días.</td>
+        <td><button onclick="speak('They work every day')">🔊</button></td>
+    </tr>
+    <tr>
+        <td>We watch TV at night.</td>
+        <td>Vemos la televisión por la noche.</td>
+        <td><button onclick="speak('We watch TV at night')">🔊</button></td>
+    </tr>
+    <tr>
+        <td>You write letters.</td>
+        <td>Tú escribes cartas.</td>
+        <td><button onclick="speak('You write letters')">🔊</button></td>
+    </tr>
+    <tr>
+        <td>She teaches English.</td>
+        <td>Ella enseña inglés.</td>
+        <td><button onclick="speak('She teaches English')">🔊</button></td>
+    </tr>
+    <tr>
+        <td>We play the piano.</td>
+        <td>Tocamos el piano.</td>
+        <td><button onclick="speak('We play the piano')">🔊</button></td>
+    </tr>
+    <tr>
+        <td>I cook dinner.</td>
+        <td>Yo cocino la cena.</td>
+        <td><button onclick="speak('I cook dinner')">🔊</button></td>
+    </tr>
+</table>
+
+<script>
+    function speak(text) {
+        var msg = new SpeechSynthesisUtterance();
+        msg.text = text;
+        msg.lang = 'en-US';
+        window.speechSynthesis.speak(msg);
+    }
+</script>
+
+PAST
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Past Tense Phrases</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+      color: black;
+    }
+    button {
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Past Tense Phrases with Audio</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>English Phrase</th>
+        <th>Translation (Spanish)</th>
+        <th>Play</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>I read a book.</td>
+        <td>Yo leí un libro.</td>
+        <td><button onclick="speak('I read a book.')">🔊</button></td>
+      </tr>
+      <tr>
+        <td>She ate breakfast.</td>
+        <td>Ella desayunó.</td>
+        <td><button onclick="speak('She ate breakfast.')">🔊</button></td>
+      </tr>
+      <tr>
+        <td>We went to the park.</td>
+        <td>Fuimos al parque.</td>
+        <td><button onclick="speak('We went to the park.')">🔊</button></td>
+      </tr>
+      <tr>
+        <td>He played soccer.</td>
+        <td>Él jugó fútbol.</td>
+        <td><button onclick="speak('He played soccer.')">🔊</button></td>
+      </tr>
+      <tr>
+        <td>They worked every day.</td>
+        <td>Ellos trabajaron todos los días.</td>
+        <td><button onclick="speak('They worked every day.')">🔊</button></td>
+      </tr>
+      <tr>
+        <td>We watched TV at night.</td>
+        <td>Vimos la televisión por la noche.</td>
+        <td><button onclick="speak('We watched TV at night.')">🔊</button></td>
+      </tr>
+      <tr>
+        <td>You wrote letters.</td>
+        <td>Tú escribiste cartas.</td>
+        <td><button onclick="speak('You wrote letters.')">🔊</button></td>
+      </tr>
+      <tr>
+        <td>She taught English.</td>
+        <td>Ella enseñó inglés.</td>
+        <td><button onclick="speak('She taught English.')">🔊</button></td>
+      </tr>
+      <tr>
+        <td>We played the piano.</td>
+        <td>Tocamos el piano.</td>
+        <td><button onclick="speak('We played the piano.')">🔊</button></td>
+      </tr>
+      <tr>
+        <td>I cooked dinner.</td>
+        <td>Yo cociné la cena.</td>
+        <td><button onclick="speak('I cooked dinner.')">🔊</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function speak(text) {
+      const msg = new SpeechSynthesisUtterance();
+      msg.text = text;
+      msg.lang = 'en-US';
+      window.speechSynthesis.speak(msg);
+    }
+  </script>
+
+</body>
+</html>
+
+---------------------------------------------------------------------
+landing
+
+import Image from "next/image";
+import Link from "next/link";
+import landing from "./loading/page";
+
+
+export default function Home() {
+  //const theme = useTheme();
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+        {/* <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30"> */}
+          <code className="font-mono font-bold">
+            <h1>
+              {/* {theme.colors.lang} */}
+              {/* ----------------------------------------- */}
+
+              {/* ----------------------------------------- */}
+
+
+
+              {"English" === "English"
+                ? "The time to learn is now in this era of artificial intelligence. It's urgent to develop the ability to read, write, and apply everything AI provides. Don't fall behind, the future is in your hands!"
+                :
+                "Ha llegado el momento de aprender en esta era de la inteligencia artificial. Es urgente que desarrolles la habilidad de leer, escribir y aplicar todo lo que la IA te ofrece. No te quedes atrás, ¡el futuro está en tus manos!"}
+            </h1>
+          </code>
+        {/* </p> */}
+        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
+          <a
+            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {/* By{" Tech"} */}
+            {/* <Image
+              src="/vercel.svg"
+              alt="Vercel Logo"
+              className="dark:invert"
+              width={100}
+              height={24}
+              priority
+            /> */}
+          </a>
+        </div>
+      </div>
+
+      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+        OBSON ELC
+        {/* <Image
+          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+          src="/next.svg"
+          alt="Next.js Logo"
+          width={180}
+          height={37}
+          priority
+        /> */}
+      </div>
+
+      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
+        <Link
+          href="/present"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          rel="noopener noreferrer"
+        >
+          <h2 className="mb-3 text-2xl font-semibold">Present</h2>
+          <p className="m-0 max-w-[30ch] text-sm opacity-50">
+            Descubre el poder de comunicarte en inglés utilizando el tiempo presente y transforma tu manera de expresarte hoy.
+          </p>
+        </Link>
+
+        <Link
+          href="/past"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          rel="noopener noreferrer"
+        >
+          <h2 className="mb-3 text-2xl font-semibold">Past</h2>
+          <p className="m-0 max-w-[30ch] text-sm opacity-50">
+            Descubre el poder de comunicarte en inglés utilizando el tiempo pasado y transforma tu manera de expresarte hoy.
+          </p>
+        </Link>
+
+        <Link
+          href="/future"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          rel="noopener noreferrer"
+        >
+          <h2 className="mb-3 text-2xl font-semibold">Future</h2>
+          <p className="m-0 max-w-[30ch] text-sm opacity-50">
+            Descubre el poder de comunicarte en inglés utilizando el tiempo futuro y transforma tu manera de expresarte hoy.
+          </p>
+        </Link>
+
+        <Link
+          href="/html"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          rel="noopener noreferrer"
+        >
+          <h2 className="mb-3 text-2xl font-semibold">HTML</h2>
+          <p className="m-0 max-w-[30ch] text-sm opacity-50">
+            Aprender HTML es clave hoy porque es la base de toda web. Te permite personalizar contenido, mejorar tu presencia en línea y abre oportunidades en un mundo digital.
+          </p>
+        </Link>
+      </div>
+    </main>
+  );
+}
+
+---------------------------------------------------------------------
