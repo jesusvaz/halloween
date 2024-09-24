@@ -3,12 +3,12 @@ import Link from 'next/link';
 const GrammarTopicsTable = () => {
   return (
     <div>
-      <h1>Grammar Topics</h1>
+      {/* <h1>Temas</h1> */}
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
-            <th style={tableHeader}>Grammar Topic</th>
-            <th style={tableHeader}>Learn Topic</th>
+            <th style={tableHeader}>Tema</th>
+            <th style={tableHeader}>Aprender Tema</th>
           </tr>
         </thead>
         <tbody>
@@ -70,6 +70,12 @@ const GrammarTopicsTable = () => {
             <td style={tableCell}>Conjunctions</td>
             <td style={tableCell}>
               <Link href="/conjunctions">Go to Conjunctions</Link>
+            </td>
+          </tr>
+          <tr>
+            <td style={tableCell}>Conjunctions</td>
+            <td style={tableCell}>
+              <Link href="/wh-questions">Go to Whquestions</Link>
             </td>
           </tr>
         </tbody>

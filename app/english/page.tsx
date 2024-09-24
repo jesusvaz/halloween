@@ -34,7 +34,7 @@ export default function English() {
                 </p>
             </div>
             <div className={`m-0 max-w-[30ch] text-sm opacity-50 p-0.5`} >
-                <h1>Escoge tema a estudiar</h1>
+                {/* <h1>Escoge tema a estudiar</h1> */}
                 <div><GrammarTopicTable /></div>
             </div>
 
