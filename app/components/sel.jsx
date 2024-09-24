@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Flor from '../../public/florDeCapomo.png';
+import { useTheme } from "../components/theme-provider";
 
 const htmlTags = [
     {
@@ -134,7 +135,7 @@ const htmlTags = [
 
 function Selection() {
     const [selectedTag, setSelectedTag] = useState(null);
-
+    const theme = useTheme();
     const handleSelectChange = (event) => {
         const selectedHTMLTag = event.target.value;
         const selectedTagObject = htmlTags.find(tag => tag.HTMLTag === selectedHTMLTag);
@@ -147,7 +148,13 @@ function Selection() {
             <br />
             <label>
                 Select an HTML tag:
-                <select onChange={handleSelectChange}>
+                <select 
+                className='bg-black'
+                style={{ 
+                    
+                    color: theme.colors.terciary, 
+                }}
+                onChange={handleSelectChange}>
                     <option value="">Select a tag</option>
                     {htmlTags.map((tag, index) => (
                         <option key={index} value={tag.HTMLTag}>{tag.HTMLTag}</option>

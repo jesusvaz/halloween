@@ -386,3 +386,277 @@ export default function Home() {
 }
 
 ---------------------------------------------------------------------
+landing page of tenses
+
+"use client"
+import Image from "next/image";
+import Link from "next/link";
+import PresentImg from "../../public/presenteTense.avif";
+/// se especifica que el componente es tipo client
+import { useTheme } from "../components/theme-provider";
+/// se exporta hook useTheme
+export default function ClientRoutPresent() {
+  /// se inicializa la vriable tipo theme
+  const theme = useTheme();
+  return (
+    <>
+      {/* <h1
+         style={{ color: theme.colors.terciary }}
+         >Presente</h1>
+        <h1>Present</h1>
+        
+        {theme.colors.lang === 'en'?<h1>English</h1>:<h1>Español</h1>} */}
+
+      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+
+          <code className="font-mono font-bold">
+
+            {
+              theme.colors.lang === 'en'
+                ?
+                <h1>The time to learn is now in this era of artificial intelligence. It's urgent to develop the ability to read, write, and apply everything AI provides. Don't fall behind, the future is in your hands!</h1>
+                :
+                <h1>Ha llegado el momento de aprender en esta era de la inteligencia artificial. Es urgente que desarrolles la habilidad de leer, escribir y aplicar todo lo que la IA te ofrece. No te quedes atrás, ¡el futuro está en tus manos!</h1>
+            }
+
+
+
+          </code>
+
+          <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
+            <a
+              className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
+              href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {/* By{" Tech"} */}
+              {/* <Image
+              src="/vercel.svg"
+              alt="Vercel Logo"
+              className="dark:invert"
+              width={100}
+              height={24}
+              priority
+            /> */}
+            </a>
+          </div>
+        </div>
+
+        <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+          OBSON Continue Education
+          {/* <Image
+          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+          src="/next.svg"
+          alt="Next.js Logo"
+          width={180}
+          height={37}
+          priority
+        /> */}
+        </div>
+
+        <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
+          <Link
+            href="/present"
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            rel="noopener noreferrer"
+          >
+            <h2 className="mb-3 text-2xl font-semibold">Present</h2>
+
+
+            {
+              theme.colors.lang === 'en'
+                ?
+                <h1>
+                  Discover the power of communicating in English using the present tense and transform the way you express yourself today.</h1>
+                :
+                <h2>Descubre el poder de comunicarte en inglés utilizando el tiempo presente y transforma tu manera de expresarte hoy.</h2>
+            }
+
+
+          </Link>
+
+          <Link
+            href="/past"
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            rel="noopener noreferrer"
+          >
+            <h2 className="mb-3 text-2xl font-semibold">Past</h2>
+
+
+            {
+              theme.colors.lang === 'en'
+                ?
+                <h1>Discover the power of communicating in English using the past tense and transform the way you express yourself today.</h1>
+                :
+                <h2>Descubre el poder de comunicarte en inglés utilizando el tiempo pasado y transforma tu manera de expresarte hoy.</h2>
+            }
+
+
+          </Link>
+
+          <Link
+            href="/future"
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            rel="noopener noreferrer"
+          >
+            <h2 className="mb-3 text-2xl font-semibold">Future</h2>
+
+            {
+              theme.colors.lang === 'en'
+                ?
+                <h1>Discover the power of communicating in English using the future tense and transform the way you express yourself today.</h1>
+                :
+                <h2>Descubre el poder de comunicarte en inglés utilizando el tiempo futuro y transforma tu manera de expresarte hoy.</h2>
+            }
+
+
+
+          </Link>
+
+          <Link
+            href="/html"
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            rel="noopener noreferrer"
+          >
+            <h2 className="mb-3 text-2xl font-semibold">HTML</h2>
+
+            {
+              theme.colors.lang === 'en'
+                ?
+                <h1>Learning HTML is key today because it is the foundation of the entire web. It allows you to customize content, improve your online presence, and opens up opportunities in a digital world.</h1>
+                :
+                <h2>Aprender HTML es clave hoy porque es la base de toda web. Te permite personalizar contenido, mejorar tu presencia en línea y abre oportunidades en un mundo digital.</h2>
+            }
+
+
+
+          </Link>
+        </div>
+      </main>
+
+    </>
+
+
+  );
+}
+
+
+----------------------------------------------------------------------
+INDICE
+1. Parts of Speech
+Strategy: Use personal interests or hobbies. Example Activity: Ask students to create sentences about something they love. 
+For example:
+
+Nouns: "My favorite musician is Taylor Swift."
+Verbs: "I play soccer every weekend."
+Adjectives: "That game was exciting."
+Ask: "What are your favorite hobbies or activities? Let’s create sentences using nouns, verbs, and adjectives related to them."
+
+2. Sentence Structure
+Strategy: Relate to current events or personal goals. Example Activity: Have students write about their weekend plans.
+
+Simple sentence: "I will visit my grandma."
+Compound sentence: "I will visit my grandma, and then I’ll watch a movie."
+Complex sentence: "Although it might rain, I will visit my grandma."
+Ask: "What are your plans for the weekend? Can you describe them using different sentence structures?"
+
+3. Tenses
+Strategy: Link to storytelling or journaling. Example Activity: Ask students to tell a story using different tenses.
+
+Past Simple: "Last summer, I went to the beach."
+Present Continuous: "I am reading a great book right now."
+Future Simple: "Next year, I will travel to Europe."
+Ask: "Can you tell me a story about something you did, something you’re doing now, and something you will do in the future?"
+
+4. Articles
+Strategy: Connect to favorite things. Example Activity: Discuss favorite movies, books, or places.
+
+Definite article: "The book I’m reading is amazing."
+Indefinite article: "I saw a great movie last night."
+Ask: "What’s a movie or book you love? How would you describe it using articles?"
+
+5. Modal Verbs
+Strategy: Use scenarios students care about. Example Activity: Create rules or advice for a club or a game.
+
+Must: "You must be on time."
+Can: "You can choose your own team."
+Ask: "If you were in charge of a club, what rules or advice would you give? Use modal verbs to express them."
+
+6. Conditional Sentences
+Strategy: Use dreams or hypothetical situations. Example Activity: Ask students about their dreams or "what if" scenarios.
+
+First Conditional: "If I study hard, I will pass the exam."
+Second Conditional: "If I won the lottery, I would buy a house."
+Third Conditional: "If I had known about the concert, I would have gone."
+Ask: "What would you do if you could do anything? Let’s create sentences about it."
+
+7. Passive Voice
+Strategy: Connect to news or history. Example Activity: Use headlines or historical events.
+
+Active: "The chef cooked the meal."
+Passive: "The meal was cooked by the chef."
+Ask: "Can you rewrite this news headline or historical fact in passive voice?"
+
+8. Questions and Negations
+Strategy: Use pop culture or personal experiences. Example Activity: Discuss a favorite movie or TV show.
+
+Yes/No: "Did you watch the latest episode?"
+WH-: "Where do you think the character will go next?"
+Negative: "I don’t think that character will survive."
+Ask: "What’s your favorite show? Let’s ask some questions and make predictions about it."
+
+9. Prepositions
+Strategy: Relate to familiar spaces. Example Activity: Describe the layout of their room or a favorite place.
+
+Place: "The desk is next to the bed."
+Time: "The party starts at 7 PM."
+Ask: "Can you describe your room using prepositions? What’s next to your bed?"
+
+10. Comparatives and Superlatives
+Strategy: Compare personal choices. Example Activity: Ask students to compare favorite sports, foods, or celebrities.
+
+Comparative: "Soccer is more popular than tennis."
+Superlative: "Pizza is the most delicious food."
+Ask: "What’s better: soccer or basketball? Let’s compare them using comparatives and superlatives."
+
+11. Pronouns
+Strategy: Use storytelling or personalization. Example Activity: Have students tell a story about themselves or someone they know.
+
+Subject Pronoun: "She loves to dance."
+Object Pronoun: "I gave him a gift."
+Ask: "Can you tell me a story about someone you admire using pronouns?"
+
+12. Reported Speech
+Strategy: Connect to conversations they’ve had. Example Activity: Ask students to report what a friend or family member said.
+
+Direct: "He said, 'I am tired.'"
+Indirect: "He said that he was tired."
+Ask: "What did your friend tell you yesterday? Can you report it in indirect speech?"
+
+13. Phrasal Verbs
+Strategy: Use in context of daily activities. Example Activity: Ask students to describe their daily routine using phrasal verbs.
+
+"I woke up early."
+"She looked after her little brother."
+Ask: "What’s your morning routine? Can you use some phrasal verbs to describe it?"
+
+14. Gerunds and Infinitives
+Strategy: Link to hobbies or aspirations. Example Activity: Discuss what they enjoy doing or what they want to do in the future.
+
+Gerund: "I enjoy playing video games."
+Infinitive: "I want to learn how to play guitar."
+Ask: "What do you enjoy doing in your free time? What do you want to learn in the future?"
+
+15. Conjunctions and Linking Words
+Strategy: Connect to storytelling or debates. Example Activity: Create a story or have a debate using conjunctions.
+
+Coordinating: "I wanted to go, but it started raining."
+Subordinating: "I stayed home because it was raining."
+Ask: "Let’s create a story or debate. How would you link your ideas using conjunctions?"
+
+By personalizing the topics and making them relevant to the students' interests and experiences, you'll help them create vivid examples in their minds, making grammar both engaging and memorable.
+
+-----------------------------------------------------------------------
+

@@ -23,7 +23,7 @@ const defaultTheme: Theme = {
         primary: "#007bff",
         secondary: "#6c757d",
         terciary: 'yellow',
-        lang: 'en'
+        lang: 'es'
     }
 }
 

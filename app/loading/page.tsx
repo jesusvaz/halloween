@@ -55,7 +55,7 @@ export default function ClientRoutPresent() {
         </div>
 
         <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-          OBSON ELC xxxxx
+        Hiaki Continue Education
           {/* <Image
           className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
           src="/next.svg"
@@ -68,61 +68,26 @@ export default function ClientRoutPresent() {
 
         <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
           <Link
-            href="/present"
+            href="/english"
             className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             rel="noopener noreferrer"
           >
-            <h2 className="mb-3 text-2xl font-semibold">Present</h2>
-            
+            <h2 className="mb-3 text-2xl font-semibold">Englsih</h2>
+
 
             {
-                theme.colors.lang === 'en'
-                  ?
-                  <h1>
-Discover the power of communicating in English using the present tense and transform the way you express yourself today.</h1>
-                  :
-                  <h2>Descubre el poder de comunicarte en inglés utilizando el tiempo presente y transforma tu manera de expresarte hoy.</h2>
-              }
-              
-            
-          </Link>
+              theme.colors.lang === 'en'
+                ?
+                <h1>
+                  Mastering English opens doors in the global business world, connecting you with companies and professionals worldwide. It allows you to stand out in a competitive environment and close international deals. It’s the key to expanding your horizons and seizing endless opportunities.
+                  </h1>
+                :
+                <h2>
+                  Dominar el inglés te abre puertas en el mundo de los negocios globales, conectándote con empresas y profesionales de todo el mundo. Te permite destacar en un entorno competitivo y cerrar tratos internacionales. Es la clave para expandir tus horizontes y aprovechar oportunidades infinitas.
+                  </h2>
+            }
 
-          <Link
-            href="/past"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            rel="noopener noreferrer"
-          >
-            <h2 className="mb-3 text-2xl font-semibold">Past</h2>
-            
 
-            {
-                theme.colors.lang === 'en'
-                  ?
-                  <h1>Discover the power of communicating in English using the past tense and transform the way you express yourself today.</h1>
-                  :
-                  <h2>Descubre el poder de comunicarte en inglés utilizando el tiempo pasado y transforma tu manera de expresarte hoy.</h2>
-              }
-              
-            
-          </Link>
-
-          <Link
-            href="/future"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            rel="noopener noreferrer"
-          >
-            <h2 className="mb-3 text-2xl font-semibold">Future</h2>
-            
-            {
-                theme.colors.lang === 'en'
-                  ?
-                  <h1>Discover the power of communicating in English using the future tense and transform the way you express yourself today.</h1>
-                  :
-                  <h2>Descubre el poder de comunicarte en inglés utilizando el tiempo futuro y transforma tu manera de expresarte hoy.</h2>
-              }
-
-              
-            
           </Link>
 
           <Link
@@ -131,18 +96,60 @@ Discover the power of communicating in English using the present tense and trans
             rel="noopener noreferrer"
           >
             <h2 className="mb-3 text-2xl font-semibold">HTML</h2>
-            
-              {
-                theme.colors.lang === 'en'
-                  ?
-                  <h1>Learning HTML is key today because it is the foundation of the entire web. It allows you to customize content, improve your online presence, and opens up opportunities in a digital world.</h1>
-                  :
-                  <h2>Aprender HTML es clave hoy porque es la base de toda web. Te permite personalizar contenido, mejorar tu presencia en línea y abre oportunidades en un mundo digital.</h2>
-              }
 
-              
-            
+            {
+              theme.colors.lang === 'en'
+                ?
+                <h1>Learning HTML is key today because it is the foundation of the entire web. It allows you to customize content, improve your online presence, and opens up opportunities in a digital world.</h1>
+                :
+                <h2>Aprender HTML es clave hoy porque es la base de toda web. Te permite personalizar contenido, mejorar tu presencia en línea y abre oportunidades en un mundo digital.</h2>
+            }
+
+
+
           </Link>
+
+          <Link
+            href="/future"
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            rel="noopener noreferrer"
+          >
+            <h2 className="mb-3 text-2xl font-semibold">AI</h2>
+
+            {
+              theme.colors.lang === 'en'
+                ?
+                <h2>Mastering artificial intelligence (AI) puts you at the forefront of innovation and technology. It enables you to automate processes, enhance decision-making, and create advanced solutions. AI is the key to transforming industries and harnessing the digital future.</h2>
+                :
+                <h2>Dominar la inteligencia artificial (IA) te coloca a la vanguardia de la innovación y la tecnología. Te permite automatizar procesos, mejorar la toma de decisiones y crear soluciones avanzadas. La IA es la clave para transformar industrias y aprovechar el futuro digital.</h2>
+            }
+
+
+
+          </Link>
+
+          <Link
+            href="/past"
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            rel="noopener noreferrer"
+          >
+            <h2 className="mb-3 text-2xl font-semibold">Frameworks</h2>
+
+
+            {
+              theme.colors.lang === 'en'
+                ?
+                <h2>Mastering web frameworks allows you to build efficient and scalable applications quickly. They simplify creating dynamic interfaces and enhance the user experience. Web frameworks are key to streamlining development and staying competitive in the tech world.</h2>
+                :
+                <h2>Dominar los frameworks web te permite desarrollar aplicaciones eficientes y escalables rápidamente. Facilitan la creación de interfaces dinámicas y mejoran la experiencia del usuario. Son la clave para agilizar el desarrollo y mantenerte competitivo en el mundo tecnológico.</h2>
+            }
+
+
+          </Link>
+
+         
+
+         
         </div>
       </main>
 

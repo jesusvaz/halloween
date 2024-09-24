@@ -5,7 +5,7 @@ import HtmlImg from "../../public/htmlEra.avif";
 export default function Home() {
     return (
         <main className="items-center  p-24">
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden flex w-3/4">
+            <div className="bg-white shadow-lg rounded-lg overflow-hidden flex w-3/4">
 
                 <div class="w-1/2 p-2">
                     <Image
