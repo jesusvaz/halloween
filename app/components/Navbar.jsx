@@ -2,7 +2,7 @@
 import React from 'react'
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';                                
-import Lang from "../LanguageSelector";
+// import Lang from "../LanguageSelector";
 
 
 export default function Navbar() {
@@ -18,7 +18,10 @@ export default function Navbar() {
           query: { language:{lang} },
           
         }}
-        >Hiaki</Link>
+        >
+          <h1>Hiaki</h1>
+          </Link>
+        <span>  The knowledge is all around us</span>
         {/* <Image
           alt="ABUELO"
           src={abuelo}
@@ -45,7 +48,7 @@ export default function Navbar() {
 
 
       <div style={{ borderRadius: '5px', overflow: 'hidden' }}>
-        <Lang />
+        {/* <Lang /> */}
         {/* <Image
         priority
           alt="framboyan"
