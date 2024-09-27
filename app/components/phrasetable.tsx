@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const PhrasesTable = () => {
   // Function to play the phrase using speech synthesis
