@@ -39,9 +39,7 @@ const PastTenseQuestionsTable = () => {
     padding: '10px',
     textAlign: 'center',
   };
-  const headerStyle = {
-    backgroundColor: '#000000',
-  };
+   
   const buttonStyle = {
     background: 'none',
     border: 'none',
