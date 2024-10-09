@@ -15,67 +15,67 @@ const GrammarTopicsTable = () => {
           <tr>
             <td style={tableCell}>Present Tense</td>
             <td style={tableCell}>
-              <Link href="/present-tense">Go to Present Tense</Link>
+              <Link href="english/present-tense">Go to Present Tense</Link>
             </td>
           </tr>
           <tr>
             <td style={tableCell}>Past Tense</td>
             <td style={tableCell}>
-              <Link href="/past-tense">Go to Past Tense</Link>
+              <Link href="english/past-tense">Go to Past Tense</Link>
             </td>
           </tr>
           <tr>
             <td style={tableCell}>Future Tense</td>
             <td style={tableCell}>
-              <Link href="/future-tense">Go to Future Tense</Link>
+              <Link href="english/future-tense">Go to Future Tense</Link>
             </td>
           </tr>
           <tr>
             <td style={tableCell}>Conditional Tense</td>
             <td style={tableCell}>
-              <Link href="/conditional-tense">Go to Conditional Tense</Link>
+              <Link href="english/conditional-tense">Go to Conditional Tense</Link>
             </td>
           </tr>
           <tr>
             <td style={tableCell}>Modal Verbs</td>
             <td style={tableCell}>
-              <Link href="/modal-verbs">Go to Modal Verbs</Link>
+              <Link href="english/modal-verbs">Go to Modal Verbs</Link>
             </td>
           </tr>
           <tr>
             <td style={tableCell}>Passive Voice</td>
             <td style={tableCell}>
-              <Link href="/passive-voice">Go to Passive Voice</Link>
+              <Link href="english/passive-voice">Go to Passive Voice</Link>
             </td>
           </tr>
           <tr>
             <td style={tableCell}>Reported Speech</td>
             <td style={tableCell}>
-              <Link href="/reported-speech">Go to Reported Speech</Link>
+              <Link href="english/reported-speech">Go to Reported Speech</Link>
             </td>
           </tr>
           <tr>
             <td style={tableCell}>Comparatives & Superlatives</td>
             <td style={tableCell}>
-              <Link href="/comparatives-superlatives">Go to Comparatives & Superlatives</Link>
+              <Link href="english/comparatives-superlatives">Go to Comparatives & Superlatives</Link>
             </td>
           </tr>
           <tr>
             <td style={tableCell}>Prepositions</td>
             <td style={tableCell}>
-              <Link href="/prepositions">Go to Prepositions</Link>
+              <Link href="english/prepositions">Go to Prepositions</Link>
             </td>
           </tr>
           <tr>
             <td style={tableCell}>Conjunctions</td>
             <td style={tableCell}>
-              <Link href="/conjunctions">Go to Conjunctions</Link>
+              <Link href="english/conjunctions">Go to Conjunctions</Link>
             </td>
           </tr>
           <tr>
             <td style={tableCell}>Conjunctions</td>
             <td style={tableCell}>
-              <Link href="/wh-questions">Go to Whquestions</Link>
+              <Link href="english/wh-questions">Go to Whquestions</Link>
             </td>
           </tr>
         </tbody>
