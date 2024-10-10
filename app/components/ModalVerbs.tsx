@@ -1,4 +1,5 @@
-
+//import ModalVrebsDefinition from '../../components/modalVerbsDefinition';
+import ModalVrebsDefinition from '../components/modalVerbsDefinition';
 
 const ModalVerbsTable = () => {
   // Function to play the phrase using speech synthesis
@@ -25,6 +26,8 @@ const ModalVerbsTable = () => {
 
   return (
     <div>
+  <ModalVrebsDefinition />
+  <br />
       <table  border="1" cellPadding="10" cellSpacing="0" style={{  width: '100%', borderCollapse: 'collapse' }}>
         <thead className='text-black'>
           <tr style={{ backgroundColor: '#f2f2f2' }}>
