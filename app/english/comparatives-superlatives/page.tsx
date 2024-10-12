@@ -1,6 +1,7 @@
 
 import ComparativesSuperlatives from '../../components/compSuperlatives';
-import AddingEr from '../../components/addingErComparative';
+import ERDefinition from '../../components/erDefenition';
+import AddingEr from '../../components/erDefenition';
 
 // <h1>Coparative Superlative</h1>
 // {/* <ComparativesSuperlatives/> */}
@@ -9,9 +10,13 @@ import AddingEr from '../../components/addingErComparative';
 export default function CoparativeSuperlative() {
     return (
         <>
+            <ERDefinition />
+            <hr />  
             <ComparativesSuperlatives />
-            <hr />
-            <AddingEr />
+
+
+            {/* <hr />
+            <AddingEr /> */}
         </>
     )
 }

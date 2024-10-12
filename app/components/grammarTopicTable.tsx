@@ -72,12 +72,7 @@ const GrammarTopicsTable = () => {
               <Link href="english/conjunctions">Go to Conjunctions</Link>
             </td>
           </tr>
-          <tr>
-            <td style={tableCell}>Conjunctions</td>
-            <td style={tableCell}>
-              <Link href="english/wh-questions">Go to Whquestions</Link>
-            </td>
-          </tr>
+         
         </tbody>
       </table>
     </div>
