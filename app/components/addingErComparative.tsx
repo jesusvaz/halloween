@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+
 
 // Function to play the adjective using speech synthesis
 const speak = (text) => {
