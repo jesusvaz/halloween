@@ -1,4 +1,4 @@
-import Conditinal from '../../components/conditional';
+import Conditinal from '../../components/conditionalDefinition';
 export default function Conditional() {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md max-w-2xl mx-auto mt-10">
@@ -57,6 +57,8 @@ export default function Conditional() {
     <p className="text-gray-700 mb-4">
       <strong>Ejemplo:</strong> "We would have been playing football if it hadn't rained." (Habríamos estado jugando al fútbol si no hubiera llovido.)
     </p>
+
+    <Conditinal/>
   </div>
   )
 }

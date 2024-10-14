@@ -21,7 +21,7 @@ export default function Navbar() {
         >
           <h1>Hiaki</h1>
           </Link>
-        <span>  The knowledge is all around us</span>
+        <span>Knowledge is all around us</span>
         {/* <Image
           alt="ABUELO"
           src={abuelo}
