@@ -98,7 +98,14 @@ const GrammarTopicsTable = () => {
               
             </td>
           </tr>
-
+          <tr>
+            <td style={tableCell}>Ought</td>
+            <td style={tableCell}>
+            <Link href="english/modal-verbs/ougthExamples">Go to Ought</Link>
+              
+            </td>
+          </tr>
+          
         </tbody>
       </table>
     </div>
