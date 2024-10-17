@@ -105,6 +105,28 @@ const GrammarTopicsTable = () => {
               
             </td>
           </tr>
+          <tr>
+            <td style={tableCell}>Must</td>
+            <td style={tableCell}>
+            <Link href="english/modal-verbs/mustDefinition">Go to Must</Link>
+              
+            </td>
+          </tr>
+
+          <tr>
+            <td style={tableCell}>Can</td>
+            <td style={tableCell}>
+            <Link href="english/modal-verbs/canExamples">Go to Can</Link>
+              
+            </td>
+          </tr>
+          <tr>
+            <td style={tableCell}>Shall</td>
+            <td style={tableCell}>
+            <Link href="english/modal-verbs/shallDefinition">Go to Shall</Link>
+              
+            </td>
+          </tr>
           
         </tbody>
       </table>
