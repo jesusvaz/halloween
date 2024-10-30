@@ -1,14 +1,12 @@
 "use client"
-import Image from "next/image";
-import PresentImg from "../../public/presenteTense.avif";
-import PresentTensePrase from "@/app/components/phrasetable";
+
 
 /// se especifica que el componente es tipo client
-import { useTheme } from "../components/theme-provider";
+// import { useTheme } from "../components/theme-provider";
 /// se exporta hook useTheme
 export default function Start() {
     /// se inicializa la vriable tipo theme
-    const theme = useTheme();
+    // const theme = useTheme();
     return (
         <>
         {/* <h1
