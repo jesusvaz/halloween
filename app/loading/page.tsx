@@ -29,7 +29,7 @@ export default function Landing() {
             D Í A &nbsp; D E &nbsp; L O S &nbsp; M U E R T O S
           </h1>
 
-<LangujaeSelector/>
+{/* <LangujaeSelector/> */}
           {/* Imagen */}
           <Image
             className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
@@ -50,7 +50,7 @@ export default function Landing() {
             className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             rel="noopener noreferrer"
           >
-            <h2 className="mb-3 text-2xl font-semibold">Acnedotas</h2>
+            <h2 className="mb-3 text-2xl font-semibold">Anecdotas</h2>
           </Link>
 
           <Link
