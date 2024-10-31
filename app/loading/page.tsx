@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Bienvenido from "../components/bienvenidaRaondom"; // Asegúrate de que este componente esté bien escrito
 
+import LangujaeSelector from "../components/langSelection";
+
 export default function Landing() {
   return (
     <>
@@ -27,6 +29,7 @@ export default function Landing() {
             D Í A &nbsp; D E &nbsp; L O S &nbsp; M U E R T O S
           </h1>
 
+<LangujaeSelector/>
           {/* Imagen */}
           <Image
             className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"

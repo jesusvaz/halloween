@@ -1,3 +1,7 @@
+
+QR code
+https://www.npmjs.com/package/qrcode
+
 ********************************************************
 theme-provider
 
