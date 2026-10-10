@@ -2,7 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Bienvenido from "../components/bienvenidaRaondom"; // Asegúrate de que este componente esté bien escrito
-
+import Rocase from "../components/bienvenidaRaondom";
+import Youcase from "../components/bienvenidaRaondom";
 import LangujaeSelector from "../components/langSelection";
 
 export default function Landing() {
