@@ -15,7 +15,7 @@ export default function Acnedotas() {
                 <Familia />
                 <Pablo />
                 <JoseAlfredo />
-                <QRGenerator/>
+                {/* <QRGenerator/> */}
             </div>
         </>
 
