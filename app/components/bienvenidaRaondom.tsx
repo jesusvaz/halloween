@@ -1,4 +1,4 @@
-// components/welcome.js
+
 import { useEffect, useState } from 'react';
 
 const Welcome = () => {

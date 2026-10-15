@@ -2,9 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Bienvenido from "../components/bienvenidaRaondom"; // Asegúrate de que este componente esté bien escrito
-import Rocase from "../components/bienvenidaRaondom";
-import Youcase from "../components/bienvenidaRaondom";
-import LangujaeSelector from "../components/langSelection";
+
+
 
 export default function Landing() {
   return (
@@ -27,7 +26,7 @@ export default function Landing() {
         <div className="flex flex-col items-center space-y-4">
           {/* Texto "Día de los Muertos" */}
           <h1 className="text-4xl font-extrabold text-center tracking-widest">
-            D Í A &nbsp; D E &nbsp; L O S &nbsp; M U E R T O S
+            L U Z &nbsp; D E L&nbsp; C A R M E N &nbsp; T A M A Y O&nbsp; P A L M A
           </h1>
 
 {/* <LangujaeSelector/> */}
@@ -54,8 +53,10 @@ export default function Landing() {
             <h2 className="mb-3 text-2xl font-semibold">Anecdotas</h2>
           </Link>
 
+
+
           <Link
-            href="/fotos"
+            href="/fotoos"
             className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             rel="noopener noreferrer"
           >
