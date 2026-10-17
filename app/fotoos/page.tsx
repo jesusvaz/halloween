@@ -28,7 +28,7 @@ export default function Pictures() {
     return (
 
         <>
-            <div className="flex flex-col items-center justify-center min-h-screen p-8">
+            <div className="flex h-dvh flex-col items-center justify-center overflow-hidden p-4 sm:p-8">
                 <div className="text-xl font-bold mb-4">
                      <h1>Fotos</h1>
                 </div>
@@ -36,17 +36,17 @@ export default function Pictures() {
                 {fotos.length === 0 ? (
                     <p>No hay fotos.</p>
                 ) : (
-                    <Carousel opts={{ loop: true }} className="w-full max-w-2xl">
+                    <Carousel opts={{ loop: true }} className="w-full max-w-5xl">
                         <CarouselContent>
                             {fotos.map((foto) => (
                                 <CarouselItem key={foto}>
-                                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-black">
+                                    <div className="relative h-[calc(100dvh-8rem)] w-full overflow-hidden rounded-lg bg-black">
                                         <Image
                                             src={`/${foto}`}
                                             alt={foto}
                                             fill
-                                            sizes="(max-width: 768px) 100vw, 672px"
-                                            className="object-cover"
+                                            sizes="(max-width: 1024px) 100vw, 1024px"
+                                            className="object-contain"
                                         />
                                     </div>
                                 </CarouselItem>
